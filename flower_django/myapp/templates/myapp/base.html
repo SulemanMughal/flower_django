@@ -1,0 +1,52 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% include 'myapp/style.html' %}
+
+    <title>{% block title %}Flowers{% endblock %}</title>
+
+
+    
+
+    {% block extra_style %}
+    {% endblock %}
+
+  </head>
+  <body>
+
+
+    {% block header %}
+        {% include 'myapp/header.html' %}
+    {% endblock %}
+
+
+    {% block content %}
+        <div class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col">
+                    <h2 class="card-title text-center">
+                        Welcome to the site
+                    </h2>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+
+    {% block footer %}
+        {% include 'myapp/footer.html' %}
+    {% endblock %}
+
+    {% include 'myapp/script.html' %}
+  
+    {% block extra_script %}
+    {% endblock %}
+
+
+  </body>
+</html>

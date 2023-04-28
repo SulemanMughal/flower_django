@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+{% block title %}{{ flower.title }}{% endblock %}
+{% block content %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <div class="container">
+                    <h1 class="display-3">{{ flower.title }}</h1>
+                    <div class="lead">{{ flower.description }}</div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
